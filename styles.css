@@ -308,15 +308,14 @@ nav .shop:hover .cart{
     display: flex;
     list-style: none;
 }
-.skill-acquisation{
-    width: 100%;
+.skill-acquisation-section .skill-acquisation{
     max-width: 134rem;
     margin-right: auto;
     margin-left: auto;
     padding-right: 2.4rem;
     padding-left: 2.4rem;
 }
-.skill-acquisation .skill-acquisation-header{
+.skill-acquisation-section .skill-acquisation-header{
     margin: 0px 0px 16px;
     color: #2d2f31;
 }
@@ -607,7 +606,7 @@ nav .shop:hover .cart{
     padding: 15px 12px;
     margin-bottom: 5px;
     cursor: pointer;
-    width: 100%;
+    flex: 1;
     margin-right: 8px;
 }
 .ud-btn>*:last-child{
@@ -616,7 +615,7 @@ nav .shop:hover .cart{
     padding: 15px 12px;
     cursor: pointer;
     margin-bottom: 5px;
-    width: 100%;
+    flex: 1;
 }
 .mobile-img{
     display: none;
@@ -836,9 +835,10 @@ footer .lat{
         width: 48px;
         height: 48px;
     }
-    .skill-acquisation{
+    .skill-acquisation-section .skill-acquisation{
         margin: 48px 0 0;
-        padding: 0px 24px;
+        padding-right: 24px;
+        padding-left: 24px;
     }
     .skill-acquisation h2{
         font-size: 24px;
@@ -857,7 +857,7 @@ footer .lat{
         justify-content: space-between;
         border-top: 1px solid #d1d7dc;
     }
-    .skill-acquisation .fourth .Drawing{
+    .skill-acquisation-section .fourth .Drawing{
         border-bottom: 1px solid #d1d7dc;
     }
     .fourth div h3{
@@ -897,6 +897,9 @@ footer .lat{
     }
     .ud-btn{
         flex-direction: column;
+    }
+    .ud-btn>*:not(:last-child){
+        margin-right: 0;
     }
     .Other-courses h3{
         text-align: start;
