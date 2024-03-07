@@ -3,38 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* .llll ul{
-    list-style:none;
-    background:#22438c;
-  }
-  .llll ul li{
-    display:inline-block;
-    position:relative;
-  }
-  .llll ul li a{
-    display:block;
-    padding:20px 25px;
-    color:#fff;
-    text-decoration:none;
-    text-align:center;
-    font-size:20px;
-  }
-  .llll ul li ul.dropdown li{
-    display:block;
-  }
-  .llll ul li ul.dropdown{
-    width:100%;
-    position:absolute;
-    background:#22438c;
-    z-index:999;
-    display:none
-  }
-  .llll ul li a:hover{
-    background:#112c66
-  }
-  .llll ul li:hover ul.dropdown{
-    display:block;
-  } */
 header{
     height: 73px;
     position: sticky;
@@ -43,97 +11,35 @@ header{
     z-index: 10;
     border-bottom: 1px solid #d1d7dc;
 }
-.headnav{
+.container{
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
 }
-.headflex{
-    display: flex;
-    align-items: center;
+.site-identity{
+    display:flex;
 }
-.headflex .NAV{
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    margin: 0 0 0 64px;
-}
-.nav,.Started{
-    display: flex;
-}
-.nav .oo{
-    margin-top: 5px;
-}
-.nav .howw{
-    margin-left: 16px;
-}
-.nav .rr{
-    margin-left: 12px;
-}
-.nav .pp{
-    margin-left: 20px;
-}
-.nav .flag{
-    margin: 0;
-    padding: 3px 10px 6px;
-    display: flex;
-    align-items: center;
-    border: 1px solid #D1D7DC;
-}
-.Started .login{
-    margin: 0px 8px;
-    padding: 12px;
-    font-weight: 700;
-}
-.Started .Sstart{
-    margin: 0px 0px 0px 12.5px;
-    color: #fff;
-    padding: 13px 11px;
-    background-color: #1c1d1f;
-    font-weight: 700;
-}
-.headflex .IMAGE{
-    padding: 22px 0;
-}
-.nav div{
-    padding: 8px;
-    margin: 0px 8px;
-} 
-header{
-    height: 73px;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 10;
-    border-bottom: 1px solid #d1d7dc;
-}
-.headnav{
-    display: flex;
-    max-width: 1160px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.headnav .IMAGE{
+.site-identity .site-title{
     padding: 22px 0px;
     display: inline-block;
 }
-.HEADNAV{
+.site-identity-nav{
     display: flex;
     justify-content: space-between;
     margin-left: 64px;
     width: 100%;
 }
-.HEADNAV ul{
+.site-identity-nav ul{
     display: flex;
     list-style: none;
 }
-.HEADNAV ul .dropdown,.country{
+.site-identity-nav ul .dropdown,.country{
     position: relative;
     height: 74px;
     display: flex;
     align-items: center;
 }
-.HEADNAV ul .dropdown a{
+.site-identity-nav ul .dropdown a{
     padding: 8px;
     margin: 0 8px;
     font-size: 16px;
@@ -141,38 +47,38 @@ header{
     color: #1c1d1f;
     text-decoration: none;
 }
-.HEADNAV ul .down a:hover{
+.site-identity-nav ul .down a:hover{
     color: #5022c3;
 }
-.HEADNAV ul input{
+.site-identity-nav ul input{
     display: none;
 }
-.HEADNAV ul input:checked ~ .other-countries{
+.site-identity-nav ul input:checked ~ .other-countries{
     display: block;
     z-index: 1000;
     background-color: white;
     border: 1px solid #d1d7dc;
     border-top: 0px;
 }
-.HEADNAV ul .country{
+.site-identity-nav ul .country{
     display: flex;
     flex-direction: column;
 }
-.country label{
+.language-selector label{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
 }
-.country label div{
+.language-selector label div{
     padding: 6px 25px 6px 10px;
     border: 1px solid #cdcdcd;
     position: relative;
 }
-.country label div:hover{
+.language-selector label div:hover{
     background-color: #eeeeee;
 }
-.country label div::after{
+.language-selector label div::after{
     content: "";
     vertical-align: middle;
     display: inline-block;
@@ -182,30 +88,35 @@ header{
     right: 5px;
     top: calc(50% - .175em);
 } 
-.country .other-countries{
+.language-selector .language-selector-dropdown{
     display: none;
 }
-.other-countries div{
+.language-selector-dropdown div{
     height: 33px;
 }
-.other-countries div:hover{
+.language-selector-dropdown div:hover{
     background-color: #eeeeee;
 }
-.country .other-countries a {
+.language-selector .language-selector-dropdown a {
     padding: 10px 17px 6px;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
 }
-.HEADNAV ul .drop a{
+#languages:checked ~ .language-selector-dropdown{
+    display: block;
+    border: 1px solid #cdcdcd;
+    background-color: #fff;
+}
+.site-identity-nav ul .login a{
     padding: 12px;
     font-weight: bold;
 }
-.HEADNAV ul .Drop a:hover{
+.site-identity-nav ul .get-started a:hover{
     background-color: #5022c3;
 }
-.HEADNAV ul .Drop a{
+.site-identity-nav ul .get-started a{
     padding: 12px;
     background-color: #000;
     color: #fff;
@@ -213,7 +124,7 @@ header{
     font-weight: bold;
     margin: 0px 0px 0px 8px;
 }
-.HEADNAV ul .dropdown > ul {
+.site-identity-nav ul .dropdown > ul {
     position: absolute;
     top: 74px;
     padding: 20px;
@@ -225,18 +136,18 @@ header{
     display: none;
     /* display: flex; */
 }
-.dropdown a:hover ~ .Men{
+.dropdown a:hover ~ .first-menu{
     display: flex;
 }
-.dropdown .Men > li{
+.dropdown .first-menu > li{
     width: max-content;
     padding-right: 64px;
 }
-.dropdown .Men > li:last-child{
+.dropdown .first-menu > li:last-child{
     width: max-content;
     padding-right: 0px;
 }
-.dropdown .Men > li h2{
+.dropdown .first-menu > li h2{
     display: inline-block;
     font-size: 14px;
     color: #6a6f73;
@@ -260,7 +171,7 @@ header{
 .menu .Sub-menu li a:hover{
     color: #5022c3;
 }
-.HEADNAV ul li .Menu{
+.site-identity-nav ul li .Menu{
     padding: 14px 0px;
     display: none;
     flex-direction: column;
@@ -277,15 +188,6 @@ header{
     padding: 5px 20px;
     position: relative;
 }
-/* .Menu > li .nested::after{
-    content: "\f105";
-    font-family: "Font Awesome 6 Pro";
-    color: #1c1d1f;
-    float: right;
-} */
-/* .HEADNAV ul li .menu li{
-    width: 100%;
-} */
 .Menu  li  .sub-menu{
     display: none;
     position: absolute;
@@ -325,54 +227,51 @@ header{
 }
 .wrapper {
     display: flex;
-    width: 100%;
-    max-width: 1160px;
-    flex: 1;
-    margin: 16px auto;
+    margin: 16px auto; 
 }
-.Get {
+.about-udemy-section {
     display: flex;
     margin-right: 65px; 
 } 
-.your{
+.about-udemy-section-inner{
     display: flex;
     flex-direction: column;
     flex: 1;
     padding: 0px 50px 0px 0px; 
 }
-.your h1{
+.about-udemy-section-inner h1{
     font-size: 40px;
     margin: 0 0 24px;
     line-height: 52px;
 }
-.your .tell{
+.about-udemy-section-inner .tell{
     font-size: 19px;
     margin: 0px 0px 22.4px;
     max-width: 420px;
     line-height: 23px;
     color: #6a6f73;
 }
-.your h2{
+.about-udemy-section-inner h2{
     margin: 44px 0px 16px;
     line-height: 24px;
     font-size: 19px;
 }
-.train{
+.udemy-opportunity{
     margin-bottom: 10px;
 }
-.train .ss{
+.udemy-opportunity .udemy-opportunity-inner{
     display: flex;
     margin: 0px 0px 18px;
     max-width: 400px;
 }
-.ss .correct{
+.udemy-opportunity-inner .checked{
     margin-right: 10px;
     padding: 4px 0px;
 }
-.ss svg{
+.udemy-opportunity-inner svg{
     color: #199fa3;
 }
-.ss p{
+.udemy-opportunity-inner p{
     line-height: 24px;
 }
 .Trusted h2{
@@ -392,25 +291,17 @@ header{
     margin-right: 30px;
     margin-bottom: 1rem;
 }
-.Input{
+.form-section{
     display: flex;
     flex: 1;
     flex-direction: column;
 }
-.field{
+.form-row{
     position: relative;
     display: flex;
     flex: 1;
 }
-.yy{
-    display: flex;
-    flex: 1;
-    width: 100%;
-}
-.yy .xx{
-    margin-right: 16px;
-}
-.field input{
+.form-row input{
     display: flex;
     width: 100%;
     height: 56px;
@@ -421,7 +312,7 @@ header{
     margin-bottom: 16px;
     outline: none;
 }
-.field label{
+.form-row label{
     display: flex;
     align-items: center;
     position: absolute;
@@ -435,8 +326,8 @@ header{
     font-size: 14px;
     color: #333333;
 }
-.field input:focus ~ label,
-.field input:valid ~ label{
+.form-row input:focus ~ label,
+.form-row input:valid ~ label{
     top: -5px;
     left: 15px;
     font-size: 12px;
@@ -465,11 +356,11 @@ header{
 .select select option{
     Margin-left: 10px;
 }
-.Field{
+.Form-row{
     display: flex;
     margin-bottom: 16px;
 }
-.Field .Select{
+.Form-row .Form-row-inner{
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -477,29 +368,27 @@ header{
     padding: 5px 15px 0 15px;
     height: 56px;
 }
-.tt{
-    margin-left: 15px;
-}
-.Field label{
+.Form-row label{
     font-size: 12px;
     font-weight: 700;
     line-height: 15px;
     color: #888888;
 }
-.Select select{
+.job-title{
+    min-width: 288px;
+    margin-right: 18px;
+}
+.Form-row-inner select{
     border: 0;
     outline: 0;
     font-weight: 700;
     font-size: 700;
     padding-top: 5px;
 }
-.Field .xx{
+.Form-row-inner:first-child{
     margin-right: 16px;
 }
-.ii{
-    min-width: 290px;
-}
-.Input button{
+.form-section button{
     height: 48px;
     color: white;
     border: none;
@@ -511,69 +400,89 @@ header{
     margin-top: 30px;
     margin-bottom: 24px;
 }
-.Input button:hover{
+.form-section button:hover{
     color: black;
     border: 1px solid black;
     background-color: white;
 }
-.Input .sign{
+.form-section .under-form-note{
     font-size: 11px;
     line-height: 17px;
 }
-.Two {
+.under-form-note a{
+    text-decoration: none;
+    color: #4435bb;;
+}
+.Trusted-brands {
     display: none;
 }
 footer{
     background-color: black;
     color: white;
+    padding: 0 0 37px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
 }
-.footer{
-    display: flex;
-    flex-direction: column;
-    padding: 0px 32px 37px;
+.footer-menu{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 64px;
 }
-.Foot{
-    display: flex;
+.footer-column{
+    width: 30.6%;
+    float: left;
+    padding-top: 64px;
+    display: inline-block;
+    vertical-align: top;
 }
-.foot{
-    flex: 1;
+.footer-column:not(:last-child){
+    margin-right: 4%;
 }
-.Foot ul{
+.footer-menu ul{
     list-style: none;
     display: flex;
     flex-direction: column;
 }
-.foot .kk{
-    margin-top: 64px;
-    margin-bottom: 64px;
-}
-.foot ul li{
+.footer-column ul li{
     margin-bottom: 15px;
 }
-.foot a{
+.footer-column a{
     color: white;
     text-decoration: none;
     line-height: 24px; 
 }
-.foot a:hover {
+.footer-column a:hover {
     color: #a435f0;
 }
-.foot .ULL{
+.footer-column .social-pages-list{
     display: flex;
     flex-direction: row;
-    display: none;
 }
-.kk p{
+.footer-column p{
     margin-bottom: 16px
 }
-.ULL li {
+.social-pages-list li {
     margin-right: 20px;
 }
-.ULL li svg{
+.social-pages-list li svg{
     width: 1.4em;
     height: 1.4em;
 }
-.kk .eng{
+.footer-column .footer-badge{
+    display: flex;
+    align-items: center;
+}
+.footer-badge .footer-badge-inner-1{
+    width: 90px;
+    height: 102px;
+    margin-right: 10px;
+}
+.footer-badge .footer-badge-inner-2{
+    width: 85px;
+    height: 110px;
+}
+.footer-column div .current-language{
     position: relative;
     margin-top: 30px;
     background-color: #fff;
@@ -581,7 +490,7 @@ footer{
     width: 60%;
     padding: 10px;
 }
-.eng::after{
+.current-language::after{
     position: absolute;
     content: "";
     border: .35em solid transparent;
@@ -589,110 +498,97 @@ footer{
     right: 10px;
     top: calc(50% - .175em);
 }
-footer .copyright{
+footer .footer-buttom{
     display: flex;
     justify-content: space-between;
 }
-.foot .lead{
-    display: flex;
-    align-items: center;
-}
-.lead .top{
-    width: 90px;
-    height: 102px;
-    margin-right: 10px;
-}
-.lead .winter{
-    width: 85px;
-    height: 110px;
-}
-.Lets-connect{
+.udemy-connect-inner{
     width: 332px;
     position: fixed;
     bottom: 90px;
     right: 20px;
 }
-.Lets-connect #ch{
+.udemy-connect-inner #close-button{
     display: none;
 }
-.Lets-connect #ch:checked ~ .close-button{
+.udemy-connect-inner #close-button:checked ~ .close-button{
     display: none;
 }
-.Lets-connect #ch:checked ~ label{
+.udemy-connect #close-button:checked ~ label{
     display: none;
 }
-.Lets-connect #ch:checked ~ .Connect{
+.udemy-connect #close-button:checked ~ .udemy-connect-body{
     display: none;
 }
-.Lets-connect label svg{
+.udemy-connect label svg{
     background-color: white;
     border-radius:50%; 
     margin-bottom:5px;
     z-index: 200;
     filter: drop-shadow(0 2px 5px rgba(0,0,0,.3));
 } 
-.Lets-connect .close-button{
+.udemy-connect-inner .close-button{
     display: flex;
     justify-content: end;
 } 
-.Lets-connect .Connect{
+.udemy-connect-inner .udemy-connect-body{
     display: flex;
     flex-direction: column;
     height: 100%;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 20px 0px;
 }
-.Lets-connect .Connect .connect{
+.udemy-connect-body .udemy-connect-body-inner1{
     background-color: #5022c3;
     padding: 24px;
     border-radius: 7px 7px 0 0;
 }
-.connect div{
+.udemy-connect-body .udemy-connect-body-inner1 div{
     display: flex;
     align-items: end;
     margin-bottom: 7px;
 }
-.connect div svg{
+.udemy-connect-body .udemy-connect-body-inner1 div svg{
     margin-left: -9px;
 }
-.connect h4{
+.udemy-connect-body .udemy-connect-body-inner1 h4{
     margin-bottom: 15px;
     font-size: 24px;
     color: white;
 }
-.connect p{
+.udemy-connect-body .udemy-connect-body-inner1 p{
     color: white;
     font-size: 14px;
 }
-.Lets-connect .Connect img{
+.udemy-connect-inner .udemy-connect-body img{
     width: 43px;
     height: 43px;
     border-radius: 20px;
 }
-.Lets-connect .Connect img ~ img{
+.udemy-connect-inner .udemy-connect-body img ~ img{
     border: 3px solid #5022c3;
     margin-left: -12px;
 }
-.Lets-connect .Connect .Train{
+.udemy-connect-inner .udemy-connect-body-inner2{
     display: flex;
     flex-direction: column;
     background-color: white;
     padding: 24px;
     border-radius: 0 0 8px 8px;
 }
-.Train div{
+.udemy-connect-body-inner2 div{
     background-color: #5022c3;
     padding: 10px;
     text-align: center;
     margin-bottom: 10px;
     color: #fff;
 }
-.Train a{
+.udemy-connect-body-inner2 a{
     font-size: 13px;
     color: #000;
     text-decoration: none;
 }
-.Train a:hover{
+.udemy-connect-body-inner2 a:hover{
     text-decoration: underline;
 }
 .bot{
@@ -809,46 +705,62 @@ footer .copyright{
         display: none;
     }
     .wrapper{
+        padding: 0px 32px;
         flex-direction: column;
     }
-    .Get{
-        margin-right: 0;
+    .about-udemy-section{
+        margin: 0;
+    }
+    .about-udemy-section-inner{
+        padding: 0;
     }
     .One{
         display: none;
     }
-    .your{
-        padding: 0px 32px;
-    }
-    .Input{
-        padding: 0px 32px;
-    }
-    .field{
+    .form-row-mobile{
         flex-direction: column;
     }
-    .yy .xx{
+    .form-row-mobile .form-row-mobile-inner{
         margin: 0;
     }
     .select{
         margin-bottom: 16px;
     }
-    .Field{
-        flex-direction: column;
-    }
-    .Field .Select{
-        padding-top: 10px;
+    .Form-row .Form-row-inner{
         padding-bottom: 10px;
     }
-    .Field .xx{
-        margin-right: 0;
-        margin: 0 0 16px;
+    .Form-row-inner:first-child{
+        margin-right: 0px;
+        margin-bottom: 16px;
     }
-    .ii{
+    .job-title{
         min-width: 100%;
     }
-    .tt{
-        margin-left: 0px;
-        margin-bottom: 16px;
+    .last-form-row{
+        margin-top: 15px;
+    }
+    footer{
+        padding: 0px 32px;
+    }
+    .footer-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-column{
+        width: 100%;
+        margin-right: 0;
+    }
+    .footer-menu:first-child{
+        padding-top: 32px;
+    }
+    .footer-menu ul{
+        width: max-content;
+    }
+    .footer-column{
+        padding-top: 0;
+    }
+    .footer-buttom{
+        flex-direction: column;
     }
     .Two{
         display: flex;
@@ -865,47 +777,5 @@ footer .copyright{
         flex-wrap: nowrap;
         width: 41.5px;
         height: 19.6px;
-    }
-    .Foot{
-        flex-direction: column;
-        margin-top: 32px;
-    }
-    .foot .kk{
-        margin: 0;
-    }
-    .kk .eng{
-        width: 100%;
-    }
-    .footer .copyright{
-        flex-direction: column;
-        margin-top: 18px;
-    }
-    .copyright .sss{
-        margin-bottom: 20px;
-    }
-}
-@media (min-width:750px) and (max-width:900px) {
-    .train .ss{
-        max-width: 100%;
-    }
-    .field{
-        flex-direction: row;
-    }
-    .yy .xx{
-        margin-right: 16px;
-    }
-    .Field{
-        flex-direction: row;
-    }
-    .Field .xx {
-        margin-right: 16px;
-    }
-    .ii{
-        min-width: 345px;
-        margin-right: 16px;
-    }
-    .two ul li img {
-        width: 153px;
-        height: 72px;
     }
 }
