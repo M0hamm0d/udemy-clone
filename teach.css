@@ -201,6 +201,16 @@ nav .searchbar{
     width: 100%;
     object-fit: cover;
 }
+.plan .curriculum-plan{
+    display: flex;
+}
+.plan .course-launch, .plan .video-record{
+    display: none;
+}
+.course-launch .Start, .video-record .Start, .curriculum-plan .Start{
+    display: flex;
+    align-items: center;
+}
 /* footer{
     background-color: #1c1d1f;
     padding: 0px 50px 0px;
@@ -716,20 +726,20 @@ footer .lat{
     }
     .how-to-begin .plan .Pplan{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        margin: 0 50px;
         border-bottom: 1px solid #d1d7dc;
     }
     .plan .button-plan{
         padding: 8px 4px;
         border-top: none;
-        border-bottom: none;
+        brder-bottom: none;
     }
-    .button-plan span{
+    .plan .button-plan button{
         font-size: 24px;
     }
     .curriculum{
-        text-decoration: underline;
-        text-underline-offset: 14px;
+        border-bottom: 2px solid black;
     }
     .ee button{
         color: #6a6f73;
